@@ -2,11 +2,11 @@
 package com.example.cumming_amie_s1824920;
 
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -14,7 +14,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
+
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
@@ -45,13 +45,8 @@ public class incidentActivity extends FragmentActivity implements View.OnClickLi
         String[] incident_description = incident_selected.getDescription().split("<br /");
         String start_date = incident_description[0].split(": ")[1];
         String end_date = incident_description[1].split(": ")[1];
-        String delay = "";
-        try {
-            delay = incident_description[2].split(": ")[0];
-        }
-        catch (Exception e){
-            delay = "No delay data available.";
-        }
+
+
         TextView start = (TextView) findViewById(R.id.start);
         TextView end = (TextView) findViewById(R.id.end);
 
